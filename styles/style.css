@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Poppins:wght@500&display=swap");
 
 /* header section */
-h2 {
+header {
+  display: flex;
   font-size: 24px;
   margin-top: 87px;
   margin-left: 120px;
@@ -19,7 +20,7 @@ body {
          start section 
 ------------------------------ */
 
-.flexible-container {
+.start-section {
   display: flex;
   margin-bottom: 40px;
 }
@@ -85,19 +86,21 @@ hr {
 /*-----------------------------------
        popular collection
   --------------------------------- */
-.top-player h2 {
+.popular-section h2 {
   text-align: center;
   font-size: 50px;
 }
-.players {
+.populars {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /* or, grid-template-columns: 1fr 1fr 1fr; */
 
   grid-row-gap: 30px;
   justify-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
 }
-.top-player .players .player img {
+.popular-section .populars .popular img {
   font-size: 2px;
 }
 .link-button-popular {
@@ -119,6 +122,7 @@ hr {
 .contact-me {
   margin-top: 5%;
   margin-bottom: 5%;
+  margin-right: 5%;
 }
 .contact-half {
   width: 50%;
@@ -161,32 +165,32 @@ hr {
   -----------------------*/
 /* mobile devices */
 @media only screen and (max-width: 688px) {
-  .website-container,
-  .flexible-container,
-  .contact-me {
+  main {
     width: 100%;
   }
-  .player,
-  .blog {
+  .populars,
+  .flex-contact,
+  .websites {
     flex-direction: column;
   }
-  .players,
-  .blogs,
-  .courses {
+  .start-section,
+  .populars,
+  .flex-contact,
+  .websites {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
 /* tablet deviecs */
 @media only screen and (min-width: 688px) and (max-width: 992px) {
-  .website-container {
+  main {
     width: 100%;
   }
-  .players,
-  .courses {
+  .websites {
     grid-template-columns: repeat(2, 1fr);
   }
-  .blogs {
+  .populars,
+  .flex-container {
     grid-template-columns: repeat(1, 1fr);
   }
 }
